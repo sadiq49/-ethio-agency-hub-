@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
@@ -31,55 +32,34 @@ import {
   DialogTitle,
   DialogFooter,
 } from "@/components/ui/dialog";
-import { 
-  Search, 
-  Filter, 
-  Plane, 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
-  Calendar, 
-  Send, 
-  RefreshCw, 
-  PlusCircle, 
-  Luggage, 
-  MapPin, 
-  Timer, 
-  Users, 
-  Ticket, 
-  CalendarClock, 
-  Bell, 
-  FileText, 
-  Briefcase, 
-  FileCheck, 
-  FileX, 
-  UserCheck, 
-  Import as Passport, 
-  FileSpreadsheet, 
-  GraduationCap,
-  Building,
-  Phone,
-  CheckSquare,
-  CalendarDays,
-  CheckCheck,
-  ListTodo,
-  ListFilter,
-  ArrowRight,
-  X,
-  Info,
-  Download,
-  ExternalLink,
-  Printer,
-  ChevronRight,
+import {
+  Search,
+  Filter,
+  Plane,
+  Clock,
+  CheckCircle2,
+  AlertCircle,
+  Calendar,
+  Check,
+  FileText,
   User,
-  Clipboard,
+  Terminal as TerminalIcon,
+  CheckSquare,
+  List,
+  HelpCircle,
+  MapPin,
   ClipboardCheck,
-  AlarmClock,
   CircleAlert,
-  Terminal,
-  CheckCircle,
-  XCircle,
-  HelpCircle
+  GraduationCap,
+  Luggage,
+  AlarmClock,
+  ChevronRight,
+  ListFilter,
+  Download,
+  CalendarDays,
+  Passport,
+  UserCheck,
+  Terminal
 } from "lucide-react";
 
 // BadgeDiv component for status badges with icon and text
@@ -365,40 +345,15 @@ const getStatusColor = (status: string) => {
 function getStatusIcon(status: string) {
   switch (status) {
     case "Ready":
-      return (
-        <BadgeDiv className="bg-green-50 text-green-600">
-          <CheckCircle className="h-4 w-4 mr-1" />
-          Ready
-        </BadgeDiv>
-      );
+      return <CheckCircle2 className="h-4 w-4" />;
     case "Pending":
-      return (
-        <BadgeDiv className="bg-yellow-50 text-yellow-600">
-          <Clock className="h-4 w-4 mr-1" />
-          Pending
-        </BadgeDiv>
-      );
+      return <Clock className="h-4 w-4" />;
     case "Delayed":
-      return (
-        <BadgeDiv className="bg-red-50 text-red-600">
-          <XCircle className="h-4 w-4 mr-1" />
-          Delayed
-        </BadgeDiv>
-      );
+      return <AlertCircle className="h-4 w-4" />;
     case "Departed":
-      return (
-        <BadgeDiv className="bg-blue-50 text-blue-600">
-          <Plane className="h-4 w-4 mr-1" />
-          Departed
-        </BadgeDiv>
-      );
+      return <Plane className="h-4 w-4" />;
     default:
-      return (
-        <BadgeDiv className="bg-gray-50 text-gray-600">
-          <HelpCircle className="h-4 w-4 mr-1" />
-          Unknown
-        </BadgeDiv>
-      );
+      return <HelpCircle className="h-4 w-4" />;
   }
 }
 
@@ -422,7 +377,7 @@ function TodayFlying({
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center">
-            <Plane className="mr-2 h-5 w-5 text-blue-500" />
+            <span className="mr-2 text-blue-500">✈️</span>
             Today Flying
           </CardTitle>
           <CardDescription>No scheduled departures for today</CardDescription>
@@ -435,7 +390,7 @@ function TodayFlying({
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center">
-          <Plane className="mr-2 h-5 w-5 text-blue-500" />
+          <span className="mr-2 text-blue-500">✈️</span>
           Today Flying
         </CardTitle>
         <CardDescription>{todayDepartures.length} workers scheduled to fly today</CardDescription>
@@ -445,7 +400,7 @@ function TodayFlying({
           <div key={departure.id} className="border rounded-lg p-4 space-y-3 hover:border-blue-200 hover:bg-blue-50 transition-colors">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <User className="h-5 w-5 text-blue-600" />
+                <span className="h-5 w-5 text-blue-600">👤</span>
                 <div>
                   <h3 className="font-medium">{departure.workerName}</h3>
                   <p className="text-xs text-muted-foreground">{departure.workerID}</p>
@@ -453,9 +408,7 @@ function TodayFlying({
               </div>
               <BadgeDiv className={getStatusColor(departure.status)}>
                 {getStatusIcon(departure.status)}
-                <BadgeDiv className={getStatusColor(departure.status)}>
-                  {departure.status}
-                </BadgeDiv>
+                <span className="ml-1">{departure.status}</span>
               </BadgeDiv>
             </div>
             
@@ -463,7 +416,7 @@ function TodayFlying({
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Flight</div>
                 <div className="font-medium flex items-center">
-                  <Plane className="mr-2 h-4 w-4 text-blue-500" />
+                  <span className="mr-2 text-blue-500">✈️</span>
                   {departure.flightDetails.airline} {departure.flightDetails.flightNumber}
                 </div>
                 <div className="text-xs">
@@ -474,11 +427,11 @@ function TodayFlying({
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Departure</div>
                 <div className="font-medium flex items-center">
-                  <Clock className="mr-2 h-4 w-4 text-blue-500" />
+                  <span className="mr-2 text-blue-500">⏰</span>
                   {departure.flightDetails.departureTime}
                 </div>
                 <div className="text-xs flex items-center">
-                  <Terminal className="mr-1 h-3 w-3" />
+                  <span className="mr-1">🏢</span>
                   Terminal {departure.flightDetails.terminal}, Gate {departure.flightDetails.gate || "TBA"}
                 </div>
               </div>
@@ -486,7 +439,7 @@ function TodayFlying({
               <div className="space-y-1">
                 <div className="text-xs text-muted-foreground">Contact</div>
                 <div className="font-medium flex items-center">
-                  <Phone className="mr-2 h-4 w-4 text-blue-500" />
+                  <span className="mr-2 text-blue-500">📞</span>
                   {departure.receivingParty.contact}
                 </div>
                 <div className="text-xs">
@@ -500,7 +453,7 @@ function TodayFlying({
               <div className="grid grid-cols-2 gap-2">
                 <div className="bg-gray-50 p-2 rounded-md">
                   <h5 className="text-xs flex items-center mb-1">
-                    <FileCheck className="mr-1 h-3 w-3 text-blue-500" />
+                    <span className="mr-1 text-blue-500">📄</span>
                     Documents
                   </h5>
                   <Progress 
@@ -511,7 +464,7 @@ function TodayFlying({
                 
                 <div className="bg-gray-50 p-2 rounded-md">
                   <h5 className="text-xs flex items-center mb-1">
-                    <ClipboardCheck className="mr-1 h-3 w-3 text-blue-500" />
+                    <span className="mr-1 text-blue-500">✓</span>
                     Logistics
                   </h5>
                   <Progress 
@@ -524,7 +477,7 @@ function TodayFlying({
             
             <div className="pt-2 flex items-center justify-between">
               <div className="flex items-center">
-                <AlarmClock className="h-4 w-4 text-amber-500 mr-1" />
+                <span className="h-4 w-4 text-amber-500 mr-1">⏱</span>
                 <span className="text-xs">
                   Boarding at <span className="font-medium">{departure.flightDetails.boardingTime}</span>
                 </span>
@@ -535,12 +488,12 @@ function TodayFlying({
                   variant="outline"
                   onClick={() => onOpenAirportPrep(departure)}
                 >
-                  <MapPin className="mr-1 h-4 w-4" />
+                  <span className="mr-1">📍</span>
                   Airport Prep
                 </Button>
                 <Button size="sm" onClick={() => onSelectDeparture(departure)}>
                   Manage
-                  <ChevronRight className="ml-1 h-4 w-4" />
+                  <span className="ml-1">→</span>
                 </Button>
               </div>
             </div>
@@ -550,11 +503,11 @@ function TodayFlying({
       <CardFooter className="border-t pt-4">
         <div className="w-full flex justify-between items-center">
           <Button variant="outline" size="sm" className="flex items-center">
-            <Bell className="mr-2 h-4 w-4" />
+            <span className="mr-2">🔔</span>
             Send Reminders
           </Button>
           <Button variant="outline" size="sm" className="flex items-center">
-            <Printer className="mr-2 h-4 w-4" />
+            <span className="mr-2">🖨️</span>
             Print Manifests
           </Button>
         </div>
@@ -576,7 +529,7 @@ function AirportPreparationChecklist({
   onUpdate: (updated: Departure) => void;
 }) {
   // Create a copy of the departure to work with
-  const [updatedDeparture, setUpdatedDeparture] = useState<Departure>({
+  const [updatedDeparture, setUpdatedDeparture] = React.useState<Departure>({
     ...departure,
     checklist: {
       ...departure.checklist,
@@ -596,24 +549,25 @@ function AirportPreparationChecklist({
   });
 
   const handleCheckboxChange = (category: string, item: string, value: boolean) => {
-    setUpdatedDeparture(prev => {
-      if (category === "airportPreparation") {
-        return {
-          ...prev,
-          checklist: {
-            ...prev.checklist,
-            airportPreparation: {
-              ...prev.checklist.airportPreparation!,
-              [item]: value
-            }
-          }
-        };
-      }
-      return prev;
-    });
+    // Create a deep copy of the departure
+    const updated = JSON.parse(JSON.stringify(updatedDeparture));
+    
+    if (category === "taxi" || category === "airportPreparation") {
+      updated.checklist.airportPreparation = updated.checklist.airportPreparation || {};
+      updated.checklist.airportPreparation[item] = value;
+      setUpdatedDeparture(updated);
+    }
   };
-
+  
   const handleInputChange = (category: string, item: string, value: string) => {
+    // Create a deep copy of the departure
+    const updated = JSON.parse(JSON.stringify(updatedDeparture));
+    
+    if (category === "taxi" || category === "airportPreparation") {
+      updated.checklist.airportPreparation = updated.checklist.airportPreparation || {};
+      updated.checklist.airportPreparation[item] = value;
+    } 
+    
     setUpdatedDeparture(prev => {
       if (category === "airportPreparation") {
         return {
@@ -648,7 +602,7 @@ function AirportPreparationChecklist({
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center">
-            <Plane className="mr-2 h-5 w-5 text-blue-500" />
+            <span className="mr-2 text-blue-500">✈️</span>
             Airport Preparation Checklist
           </DialogTitle>
           <DialogDescription>
@@ -660,7 +614,7 @@ function AirportPreparationChecklist({
           {/* Worker info section */}
           <div className="border rounded-lg p-4">
             <h3 className="text-sm font-medium mb-3 flex items-center">
-              <User className="mr-2 h-4 w-4 text-blue-500" />
+              <span className="mr-2 text-blue-500">👤</span>
               Worker Information
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -690,7 +644,7 @@ function AirportPreparationChecklist({
           {/* Flight Details */}
           <div className="border rounded-lg p-4">
             <h3 className="text-sm font-medium mb-3 flex items-center">
-              <Plane className="mr-2 h-4 w-4 text-blue-500" />
+              <span className="mr-2 text-blue-500">✈️</span>
               Flight Details
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -724,7 +678,7 @@ function AirportPreparationChecklist({
           {/* Taxi Arrangements */}
           <div className="border rounded-lg p-4">
             <h3 className="text-sm font-medium mb-3 flex items-center">
-              <MapPin className="mr-2 h-4 w-4 text-blue-500" />
+              <span className="mr-2 text-blue-500">📍</span>
               Taxi Arrangements to Bole International Airport
             </h3>
             
@@ -734,7 +688,7 @@ function AirportPreparationChecklist({
                   type="checkbox"
                   id="taxiArranged"
                   checked={airportPrep.taxiArranged}
-                  onChange={e => handleCheckboxChange("airportPreparation", "taxiArranged", e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange("airportPreparation", "taxiArranged", e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300"
                 />
                 <Label htmlFor="taxiArranged">Taxi arranged with trusted provider</Label>
@@ -745,7 +699,7 @@ function AirportPreparationChecklist({
                   type="checkbox"
                   id="taxiConfirmed"
                   checked={airportPrep.taxiConfirmed}
-                  onChange={e => handleCheckboxChange("airportPreparation", "taxiConfirmed", e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange("airportPreparation", "taxiConfirmed", e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300"
                 />
                 <Label htmlFor="taxiConfirmed">Driver confirmed pickup</Label>
@@ -755,13 +709,13 @@ function AirportPreparationChecklist({
                 <div>
                   <Label htmlFor="pickupTime" className="text-sm">Pickup Time</Label>
                   <div className="relative">
-                    <Clock className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <span className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground">⏰</span>
                     <Input
                       id="pickupTime"
                       type="time" 
                       placeholder={suggestedPickupTimeString}
                       value={airportPrep.pickupTime || ""}
-                      onChange={e => handleInputChange("airportPreparation", "pickupTime", e.target.value)}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange("airportPreparation", "pickupTime", e.target.value)}
                       className="pl-8"
                     />
                     <p className="text-xs text-muted-foreground mt-1">
@@ -773,12 +727,12 @@ function AirportPreparationChecklist({
                 <div>
                   <Label htmlFor="driverContact" className="text-sm">Driver Contact</Label>
                   <div className="relative">
-                    <Phone className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <span className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground">📞</span>
                     <Input
                       id="driverContact"
                       placeholder="+251 9XX XXX XXX"
                       value={airportPrep.driverContact || ""}
-                      onChange={e => handleInputChange("airportPreparation", "driverContact", e.target.value)}
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange("airportPreparation", "driverContact", e.target.value)}
                       className="pl-8"
                     />
                   </div>
@@ -790,7 +744,7 @@ function AirportPreparationChecklist({
           {/* Airport Checklist */}
           <div className="border rounded-lg p-4">
             <h3 className="text-sm font-medium mb-3 flex items-center">
-              <Terminal className="mr-2 h-4 w-4 text-blue-500" />
+              <span className="mr-2 text-blue-500">🏢</span>
               Bole International Airport Preparation
             </h3>
             
@@ -800,7 +754,7 @@ function AirportPreparationChecklist({
                   type="checkbox"
                   id="checkInComplete"
                   checked={airportPrep.checkInComplete}
-                  onChange={e => handleCheckboxChange("airportPreparation", "checkInComplete", e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange("airportPreparation", "checkInComplete", e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300"
                 />
                 <Label htmlFor="checkInComplete">Check-in completed</Label>
@@ -811,7 +765,7 @@ function AirportPreparationChecklist({
                   type="checkbox"
                   id="securityScreening"
                   checked={airportPrep.securityScreening}
-                  onChange={e => handleCheckboxChange("airportPreparation", "securityScreening", e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange("airportPreparation", "securityScreening", e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300"
                 />
                 <Label htmlFor="securityScreening">Security screening passed</Label>
@@ -822,7 +776,7 @@ function AirportPreparationChecklist({
                   type="checkbox"
                   id="immigrationClearance"
                   checked={airportPrep.immigrationClearance}
-                  onChange={e => handleCheckboxChange("airportPreparation", "immigrationClearance", e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange("airportPreparation", "immigrationClearance", e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300"
                 />
                 <Label htmlFor="immigrationClearance">Immigration clearance completed</Label>
@@ -833,7 +787,7 @@ function AirportPreparationChecklist({
                   type="checkbox"
                   id="boardingGateLocated"
                   checked={airportPrep.boardingGateLocated}
-                  onChange={e => handleCheckboxChange("airportPreparation", "boardingGateLocated", e.target.checked)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange("airportPreparation", "boardingGateLocated", e.target.checked)}
                   className="w-4 h-4 rounded border-gray-300"
                 />
                 <Label htmlFor="boardingGateLocated">Boarding gate located</Label>
@@ -842,12 +796,12 @@ function AirportPreparationChecklist({
               <div className="pt-2">
                 <Label htmlFor="arrivalTime" className="text-sm">Airport Arrival Time</Label>
                 <div className="relative">
-                  <Clock className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+                  <span className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground">⏰</span>
                   <Input
                     id="arrivalTime"
                     type="time"
                     value={airportPrep.arrivalTime || ""}
-                    onChange={e => handleInputChange("airportPreparation", "arrivalTime", e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange("airportPreparation", "arrivalTime", e.target.value)}
                     className="pl-8"
                   />
                 </div>
@@ -858,29 +812,29 @@ function AirportPreparationChecklist({
           {/* Tips for Workers */}
           <div className="border rounded-lg p-4 bg-blue-50">
             <h3 className="text-sm font-medium mb-3 flex items-center">
-              <Info className="mr-2 h-4 w-4 text-blue-500" />
+              <span className="mr-2 text-blue-500">💡</span>
               Tips for Workers at Bole International Airport
             </h3>
             
             <div className="space-y-2 text-sm">
               <div className="flex items-start gap-2">
-                <CheckSquare className="h-4 w-4 text-green-500 mt-0.5" />
+                <span className="h-4 w-4 text-green-500 mt-0.5">✓</span>
                 <p>Arrive at least 3 hours before international flights</p>
               </div>
               <div className="flex items-start gap-2">
-                <CheckSquare className="h-4 w-4 text-green-500 mt-0.5" />
+                <span className="h-4 w-4 text-green-500 mt-0.5">✓</span>
                 <p>Keep passport, visa, and ticket easily accessible</p>
               </div>
               <div className="flex items-start gap-2">
-                <CheckSquare className="h-4 w-4 text-green-500 mt-0.5" />
+                <span className="h-4 w-4 text-green-500 mt-0.5">✓</span>
                 <p>Ensure luggage complies with airline weight restrictions</p>
               </div>
               <div className="flex items-start gap-2">
-                <CheckSquare className="h-4 w-4 text-green-500 mt-0.5" />
+                <span className="h-4 w-4 text-green-500 mt-0.5">✓</span>
                 <p>Have employer contact details saved on phone and written down</p>
               </div>
               <div className="flex items-start gap-2">
-                <CheckSquare className="h-4 w-4 text-green-500 mt-0.5" />
+                <span className="h-4 w-4 text-green-500 mt-0.5">✓</span>
                 <p>Keep some cash in local currency for emergencies</p>
               </div>
             </div>
@@ -901,14 +855,14 @@ function AirportPreparationChecklist({
 }
 
 export default function DeparturePage() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [statusFilter, setStatusFilter] = useState("all");
-  const [selectedDeparture, setSelectedDeparture] = useState<Departure | null>(null);
-  const [activeTab, setActiveTab] = useState("all");
-  const [showNewDepartureDialog, setShowNewDepartureDialog] = useState(false);
-  const [showScheduleDialog, setShowScheduleDialog] = useState(false);
-  const [checklistOpen, setChecklistOpen] = useState(false);
-  const [airportPrepOpen, setAirportPrepOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [statusFilter, setStatusFilter] = React.useState("all");
+  const [selectedDeparture, setSelectedDeparture] = React.useState<Departure | null>(null);
+  const [activeTab, setActiveTab] = React.useState("all");
+  const [showNewDepartureDialog, setShowNewDepartureDialog] = React.useState(false);
+  const [showScheduleDialog, setShowScheduleDialog] = React.useState(false);
+  const [checklistOpen, setChecklistOpen] = React.useState(false);
+  const [airportPrepOpen, setAirportPrepOpen] = React.useState(false);
 
   // Fake current date for demo purposes
   const currentDate = "2024-03-20";
@@ -971,7 +925,7 @@ export default function DeparturePage() {
               Deployment Schedule
             </Button>
             <Button variant="secondary" onClick={() => setShowNewDepartureDialog(true)}>
-              <PlusCircle className="mr-2 h-4 w-4" />
+              <span className="mr-2">➕</span>
               New Departure
             </Button>
           </div>
@@ -996,11 +950,11 @@ export default function DeparturePage() {
               </div>
               <div className="flex gap-2">
                 <Button size="sm" variant="outline" className="border-blue-300 text-blue-800 hover:bg-blue-100">
-                  <Bell className="mr-2 h-4 w-4" />
+                  <span className="mr-2">🔔</span>
                   Send Reminders
                 </Button>
                 <Button size="sm" className="bg-blue-600 hover:bg-blue-700" onClick={() => setActiveTab("today")}>
-                  <CheckSquare className="mr-2 h-4 w-4" />
+                  <span className="mr-2">✅</span>
                   View Checklist
                 </Button>
               </div>
@@ -1013,7 +967,7 @@ export default function DeparturePage() {
         <Card className="bg-gradient-to-br from-slate-50 to-slate-100">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium flex items-center">
-              <CalendarDays className="mr-2 h-4 w-4 text-slate-500" />
+              <Calendar className="mr-2 h-4 w-4 text-slate-500" />
               Total Scheduled
             </CardTitle>
           </CardHeader>
@@ -1115,7 +1069,7 @@ export default function DeparturePage() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium flex items-center">
-              <Terminal className="mr-2 h-4 w-4 text-blue-500" />
+              <TerminalIcon className="mr-2 h-4 w-4 text-blue-500" />
               Airport Preparation
             </CardTitle>
           </CardHeader>
@@ -1165,7 +1119,7 @@ export default function DeparturePage() {
               <span className="sm:hidden">Today</span>
             </TabsTrigger>
             <TabsTrigger value="upcoming" className="flex items-center">
-              <Calendar className="mr-2 h-4 w-4" />
+              <span className="mr-2">📅</span>
               <span className="hidden sm:inline">Upcoming</span>
               <span className="sm:hidden">Soon</span>
             </TabsTrigger>
@@ -1178,13 +1132,13 @@ export default function DeparturePage() {
 
           <div className="flex gap-2 items-center">
             <div className="relative w-full sm:w-64">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground">🔍</span>
               <Input
                 type="search"
                 placeholder="Search worker or flight..."
                 className="pl-8"
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
               />
             </div>
             <Select value={statusFilter} onValueChange={setStatusFilter}>
