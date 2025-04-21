@@ -1,0 +1,59 @@
+// Global type declarations for modules used in the project
+
+declare module 'react' {
+  export * from 'react';
+}
+
+declare module 'lucide-react' {
+  export const Search: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Filter: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Clock: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const CheckCircle2: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const AlertCircle: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const FileText: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const History: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const UserCheck: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Plane: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const UserX: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const RefreshCw: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const CalendarClock: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const ArrowLeftRight: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const FileWarning: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Building2: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const MapPin: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Phone: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Mail: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Calendar: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Send: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const PlusCircle: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Luggage: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Timer: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Users: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Ticket: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Bell: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Briefcase: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Building: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const CheckCircle: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const X: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const XCircle: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const RotateCw: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const HelpCircle: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const ClipboardCheck: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const FileCheck: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Globe: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const ArrowUpDown: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const User: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Stethoscope: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const UsersRound: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Database: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const GraduationCap: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const BadgeCheck: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const ArrowRight: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const MoreHorizontal: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Eye: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Trash2: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const CalendarIcon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const CheckSquare: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const LayoutGrid: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  export const Pencil: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+} 
