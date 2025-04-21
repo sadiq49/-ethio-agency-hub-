@@ -1,0 +1,10 @@
+theme: jekyll-theme-primer
+title: Ethio Agency Hub
+description: A comprehensive digital platform for Ethiopian employment agencies
+baseurl: "/-ethio-agency-hub-"
+url: "https://sadiq49.github.io"
+github:
+  is_project_page: true
+  repository_url: https://github.com/sadiq49/-ethio-agency-hub-
+  repository_name: -ethio-agency-hub-
+  owner_name: sadiq49 
