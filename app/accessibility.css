@@ -1,0 +1,88 @@
+/* Font Size */
+.text-normal {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: 1.125rem;
+}
+
+.text-x-large {
+  font-size: 1.25rem;
+}
+
+/* High Contrast */
+.high-contrast {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 0 0% 90%;
+  --secondary-foreground: 0 0% 0%;
+  
+  --muted: 0 0% 85%;
+  --muted-foreground: 0 0% 0%;
+  
+  --accent: 0 0% 80%;
+  --accent-foreground: 0 0% 0%;
+  
+  --border: 0 0% 0%;
+}
+
+.dark.high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+  
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 100%;
+  
+  --accent: 0 0% 25%;
+  --accent-foreground: 0 0% 100%;
+  
+  --border: 0 0% 100%;
+}
+
+/* Reduced Motion */
+.reduce-motion * {
+  transition-duration: 0.001ms !important;
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Visible */
+.focus-visible :focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  z-index: 9999;
+  border: 2px solid hsl(var(--primary));
+}

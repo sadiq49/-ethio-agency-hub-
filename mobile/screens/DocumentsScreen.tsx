@@ -1,195 +1,270 @@
-import React, { useState } from 'react';
-import { ScrollView, View } from 'react-native';
-import { Card, Title, List, Button, ProgressBar, Portal, Dialog, Text } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import * as DocumentPicker from 'expo-document-picker';
-import * as FileSystem from 'expo-file-system';
+import React, { useState, useEffect } from 'react';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import { Card, Title, Paragraph, Badge, ActivityIndicator, Button, Menu, Divider } from 'react-native-paper';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { supabase } from '../lib/supabase';
-import { styles } from '../styles';
+import { format } from 'date-fns';
+import { theme } from '../theme';
 
-interface Document {
+type DocumentRecord = {
   id: string;
-  name: string;
-  type: string;
-  status: 'pending' | 'uploaded' | 'verified' | 'rejected';
-  uploadDate?: string;
-  expiryDate?: string;
-}
+  worker_name: string;
+  document_type: string;
+  status: string;
+  submitted_at: string | null;
+  processed_at: string | null;
+  processing_time: number | null;
+  processor_name: string | null;
+};
 
-const requiredDocuments: Document[] = [
-  {
-    id: 'doc1',
-    name: 'Passport',
-    type: 'passport',
-    status: 'uploaded',
-    uploadDate: '2024-01-15',
-    expiryDate: '2029-01-15'
-  },
-  {
-    id: 'doc2',
-    name: 'Medical Certificate',
-    type: 'medical',
-    status: 'pending'
-  },
-  {
-    id: 'doc3',
-    name: 'Police Clearance',
-    type: 'police',
-    status: 'verified',
-    uploadDate: '2024-02-01',
-    expiryDate: '2024-08-01'
-  },
-  {
-    id: 'doc4',
-    name: 'Educational Certificates',
-    type: 'education',
-    status: 'pending'
-  },
-  {
-    id: 'doc5',
-    name: 'Training Certificates',
-    type: 'training',
-    status: 'pending'
-  }
-];
+export default function DocumentsScreen({ navigation }) {
+  const [documents, setDocuments] = useState<DocumentRecord[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [menuVisible, setMenuVisible] = useState<string | null>(null);
 
-export default function DocumentsScreen() {
-  const [uploading, setUploading] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState(0);
-  const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
-  const [dialogVisible, setDialogVisible] = useState(false);
+  useEffect(() => {
+    fetchDocuments();
+  }, []);
 
-  const handleDocumentPick = async (document: Document) => {
+  const fetchDocuments = async () => {
     try {
-      setSelectedDocument(document);
-      const result = await DocumentPicker.getDocumentAsync({
-        type: ['application/pdf', 'image/*'],
-        copyToCacheDirectory: true
-      });
-
-      if (result.type === 'success') {
-        setUploading(true);
-        setUploadProgress(0);
-        setDialogVisible(true);
-
-        // Simulate upload progress
-        const interval = setInterval(() => {
-          setUploadProgress((prev) => {
-            if (prev >= 100) {
-              clearInterval(interval);
-              return 100;
-            }
-            return prev + 10;
-          });
-        }, 500);
-
-        // Simulate upload completion
-        setTimeout(() => {
-          setUploading(false);
-          setDialogVisible(false);
-          setUploadProgress(0);
-        }, 5000);
-      }
+      setIsLoading(true);
+      
+      // Replace with your actual Supabase query
+      const { data, error } = await supabase
+        .from('documents')
+        .select('*')
+        .order('submitted_at', { ascending: false });
+      
+      if (error) throw error;
+      
+      setDocuments(data || []);
     } catch (error) {
-      console.error('Error picking document:', error);
+      console.error('Error fetching documents:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusBadge = (status: string) => {
     switch (status) {
-      case 'uploaded':
-        return 'check-circle';
-      case 'verified':
-        return 'shield-check';
+      case 'pending_review':
+        return <Badge style={styles.pendingBadge}>Pending Review</Badge>;
+      case 'approved':
+        return <Badge style={styles.approvedBadge}>Approved</Badge>;
       case 'rejected':
-        return 'close-circle';
+        return <Badge style={styles.rejectedBadge}>Rejected</Badge>;
+      case 'expired':
+        return <Badge style={styles.expiredBadge}>Expired</Badge>;
+      case 'needs_correction':
+        return <Badge style={styles.correctionBadge}>Needs Correction</Badge>;
       default:
-        return 'clock';
+        return <Badge style={styles.defaultBadge}>{status}</Badge>;
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'uploaded':
-        return 'blue';
-      case 'verified':
-        return 'green';
-      case 'rejected':
-        return 'red';
-      default:
-        return 'orange';
-    }
+  const formatDate = (dateString: string | null) => {
+    if (!dateString) return 'N/A';
+    return format(new Date(dateString), 'PPP');
   };
+
+  const formatDocumentType = (type: string) => {
+    return type.replace('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+  };
+
+  const renderDocumentItem = ({ item }: { item: DocumentRecord }) => (
+    <Card style={styles.card}>
+      <Card.Content>
+        <View style={styles.cardHeader}>
+          <Title>{item.worker_name}</Title>
+          {getStatusBadge(item.status)}
+        </View>
+        
+        <Paragraph style={styles.documentType}>
+          {formatDocumentType(item.document_type)}
+        </Paragraph>
+        
+        <View style={styles.dateContainer}>
+          <View style={styles.dateItem}>
+            <Text style={styles.dateLabel}>Submitted:</Text>
+            <Text style={styles.dateValue}>{formatDate(item.submitted_at)}</Text>
+          </View>
+          
+          <View style={styles.dateItem}>
+            <Text style={styles.dateLabel}>Processed:</Text>
+            <Text style={styles.dateValue}>{formatDate(item.processed_at)}</Text>
+          </View>
+        </View>
+        
+        {item.processing_time && (
+          <Text style={styles.processingTime}>
+            Processing Time: {item.processing_time.toFixed(1)} hours
+          </Text>
+        )}
+      </Card.Content>
+      
+      <Card.Actions>
+        <Button 
+          mode="text" 
+          onPress={() => navigation.navigate('DocumentDetail', { documentId: item.id })}
+        >
+          View Details
+        </Button>
+        
+        <View style={{ flex: 1 }} />
+        
+        <Menu
+          visible={menuVisible === item.id}
+          onDismiss={() => setMenuVisible(null)}
+          anchor={
+            <TouchableOpacity onPress={() => setMenuVisible(item.id)}>
+              <MaterialCommunityIcons name="dots-vertical" size={24} color={theme.colors.primary} />
+            </TouchableOpacity>
+          }
+        >
+          <Menu.Item onPress={() => {
+            setMenuVisible(null);
+            navigation.navigate('DocumentDetail', { documentId: item.id });
+          }} title="View Details" />
+          <Divider />
+          <Menu.Item onPress={() => {
+            setMenuVisible(null);
+            navigation.navigate('WorkerProfile', { workerId: item.id });
+          }} title="View Worker Profile" />
+          <Divider />
+          <Menu.Item onPress={() => {
+            setMenuVisible(null);
+            // Implement document download functionality
+          }} title="Download Document" />
+        </Menu>
+      </Card.Actions>
+    </Card>
+  );
+
+  if (isLoading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color={theme.colors.primary} />
+        <Text style={styles.loadingText}>Loading documents...</Text>
+      </View>
+    );
+  }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
-        <Card style={styles.card}>
-          <Card.Content>
-            <Title>Required Documents</Title>
-            <List.Section>
-              {requiredDocuments.map((doc) => (
-                <List.Item
-                  key={doc.id}
-                  title={doc.name}
-                  description={doc.uploadDate ? `Uploaded on ${doc.uploadDate}` : 'Pending upload'}
-                  left={props => <List.Icon {...props} icon="file-document" />}
-                  right={() => (
-                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                      <List.Icon
-                        icon={getStatusIcon(doc.status)}
-                        color={getStatusColor(doc.status)}
-                      />
-                      {doc.status === 'pending' && (
-                        <Button
-                          mode="contained"
-                          onPress={() => handleDocumentPick(doc)}
-                          compact
-                        >
-                          Upload
-                        </Button>
-                      )}
-                    </View>
-                  )}
-                />
-              ))}
-            </List.Section>
-          </Card.Content>
-        </Card>
-
-        <Card style={styles.card}>
-          <Card.Content>
-            <Title>Document Status</Title>
-            <List.Section>
-              <List.Item
-                title="Uploaded Documents"
-                description={`${requiredDocuments.filter(d => d.status === 'uploaded' || d.status === 'verified').length} of ${requiredDocuments.length}`}
-                left={props => <List.Icon {...props} icon="folder-check" />}
-              />
-              <List.Item
-                title="Pending Verification"
-                description={`${requiredDocuments.filter(d => d.status === 'uploaded').length} documents`}
-                left={props => <List.Icon {...props} icon="clock-check" />}
-              />
-              <List.Item
-                title="Expiring Soon"
-                description="2 documents in next 30 days"
-                left={props => <List.Icon {...props} icon="clock-alert" />}
-              />
-            </List.Section>
-          </Card.Content>
-        </Card>
-      </ScrollView>
-
-      <Portal>
-        <Dialog visible={dialogVisible} dismissable={false}>
-          <Dialog.Title>Uploading Document</Dialog.Title>
-          <Dialog.Content>
-            <Text>Uploading {selectedDocument?.name}</Text>
-            <ProgressBar progress={uploadProgress / 100} style={styles.progressBar} />
-          </Dialog.Content>
-        </Dialog>
-      </Portal>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <FlatList
+        data={documents}
+        renderItem={renderDocumentItem}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.listContainer}
+        ListEmptyComponent={
+          <View style={styles.emptyContainer}>
+            <Text style={styles.emptyText}>No documents found</Text>
+          </View>
+        }
+        refreshing={isLoading}
+        onRefresh={fetchDocuments}
+      />
+      
+      <TouchableOpacity 
+        style={styles.fab}
+        onPress={() => navigation.navigate('UploadDocument')}
+      >
+        <MaterialCommunityIcons name="plus" size={24} color="#fff" />
+      </TouchableOpacity>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingText: {
+    marginTop: 10,
+    fontSize: 16,
+  },
+  listContainer: {
+    padding: 16,
+  },
+  card: {
+    marginBottom: 16,
+    elevation: 2,
+  },
+  cardHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  documentType: {
+    fontSize: 16,
+    marginBottom: 12,
+  },
+  dateContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  dateItem: {
+    flex: 1,
+  },
+  dateLabel: {
+    fontSize: 12,
+    color: '#666',
+  },
+  dateValue: {
+    fontSize: 14,
+  },
+  processingTime: {
+    fontSize: 14,
+    fontStyle: 'italic',
+    color: '#666',
+  },
+  pendingBadge: {
+    backgroundColor: '#FFC107',
+  },
+  approvedBadge: {
+    backgroundColor: '#4CAF50',
+  },
+  rejectedBadge: {
+    backgroundColor: '#F44336',
+  },
+  expiredBadge: {
+    backgroundColor: '#9E9E9E',
+  },
+  correctionBadge: {
+    backgroundColor: '#FF9800',
+  },
+  defaultBadge: {
+    backgroundColor: '#2196F3',
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  emptyText: {
+    fontSize: 16,
+    color: '#666',
+  },
+  fab: {
+    position: 'absolute',
+    right: 16,
+    bottom: 16,
+    backgroundColor: theme.colors.primary,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 4,
+  },
+});

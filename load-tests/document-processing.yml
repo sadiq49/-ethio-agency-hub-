@@ -1,0 +1,47 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 30
+      arrivalRate: 5
+      rampTo: 20
+      name: "Warm up phase"
+    - duration: 60
+      arrivalRate: 20
+      name: "Sustained load"
+    - duration: 30
+      arrivalRate: 20
+      rampTo: 5
+      name: "Ramp down"
+  defaults:
+    headers:
+      Content-Type: "application/json"
+      Accept: "application/json"
+
+scenarios:
+  - name: "Document processing flow"
+    flow:
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "test@example.com"
+            password: "password123"
+          capture:
+            - json: "$.access_token"
+              as: "token"
+      
+      - get:
+          url: "/api/documents"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          capture:
+            - json: "$[0].id"
+              as: "documentId"
+              when: "statusCode === 200 && $[0]"
+      
+      - get:
+          url: "/api/documents/{{ documentId }}"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          when: "documentId !== undefined"
+      
+      - think: 3

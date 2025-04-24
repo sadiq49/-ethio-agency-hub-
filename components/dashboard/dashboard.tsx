@@ -11,6 +11,14 @@ import { DatePickerWithRange } from '@/components/dashboard/date-range-picker';
 import { Button } from '@/components/ui/button';
 import { PlusCircle, Calendar, FileText, Users } from 'lucide-react';
 
+/**
+ * Dashboard Component
+ * 
+ * Main dashboard view that displays key metrics and activity information.
+ * Includes status cards, worker statistics, and task management.
+ * 
+ * @returns React component with dashboard UI
+ */
 export default function Dashboard() {
   const [dateRange, setDateRange] = useState<{
     from: Date | undefined;

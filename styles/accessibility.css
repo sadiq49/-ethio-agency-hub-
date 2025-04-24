@@ -1,0 +1,84 @@
+/* Font size adjustments */
+.text-normal {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+
+.text-x-large {
+  font-size: 1.5rem;
+}
+
+/* High contrast mode */
+.high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #ffff00;
+  --primary-foreground: #000000;
+  --secondary: #00ffff;
+  --secondary-foreground: #000000;
+  --muted: #333333;
+  --muted-foreground: #ffffff;
+  --accent: #ff00ff;
+  --accent-foreground: #000000;
+  --destructive: #ff0000;
+  --destructive-foreground: #ffffff;
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #ffff00;
+}
+
+.high-contrast a {
+  text-decoration: underline;
+}
+
+.high-contrast button:focus,
+.high-contrast a:focus,
+.high-contrast input:focus,
+.high-contrast select:focus,
+.high-contrast textarea:focus {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Screen reader optimizations */
+.screen-reader-optimized .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.screen-reader-optimized [aria-hidden="true"] {
+  display: none !important;
+}
+
+.screen-reader-optimized a,
+.screen-reader-optimized button,
+.screen-reader-optimized input,
+.screen-reader-optimized select,
+.screen-reader-optimized textarea {
+  position: relative;
+}
+
+.screen-reader-optimized a:focus,
+.screen-reader-optimized button:focus,
+.screen-reader-optimized input:focus,
+.screen-reader-optimized select:focus,
+.screen-reader-optimized textarea:focus {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+}

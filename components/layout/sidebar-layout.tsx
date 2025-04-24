@@ -152,6 +152,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             Agency Management System
           </div>
           <div className="flex items-center gap-2">
+            <NotificationCenter />
             <ThemeToggle />
             <UserNav />
           </div>
@@ -225,8 +226,11 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             </div>
           </ScrollArea>
         </aside>
-        <main className="flex-1 p-4 md:p-6">{children}</main>
+        <main className="flex-1 p-6">
+          {children}
+        </main>
       </div>
+      <ToastNotifications />
     </div>
   );
 }

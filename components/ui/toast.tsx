@@ -7,6 +7,9 @@ import { X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
+import { Toaster } from "@/components/ui/toast";
+import { toast } from "sonner";
+
 const ToastProvider = ToastPrimitives.Provider;
 
 const ToastViewport = React.forwardRef<
@@ -126,4 +129,33 @@ export {
   ToastDescription,
   ToastClose,
   ToastAction,
+};
+
+
+// Create a toast component and context
+
+import * as React from "react";
+import { Toaster as SonnerToaster } from "sonner";
+
+export function Toaster() {
+  return (
+    <SonnerToaster 
+      position="top-right"
+      toastOptions={{
+        duration: 5000,
+        className: "border border-border",
+      }}
+    />
+  );
+}
+
+// In _app.tsx or layout.tsx
+import { Toaster } from "@/components/ui/toast";
+import { toast } from "sonner";
+
+// Then in the document processing page:
+const handleRefresh = () => {
+  refetchStats();
+  refetchDocuments();
+  toast.success("Data refreshed successfully");
 };

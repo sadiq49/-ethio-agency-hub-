@@ -1,0 +1,45 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+      rampTo: 50
+      name: "Ramp up"
+    - duration: 120
+      arrivalRate: 50
+      name: "Sustained load"
+  defaults:
+    headers:
+      Content-Type: "application/json"
+      Accept: "application/json"
+
+scenarios:
+  - name: "Notification system flow"
+    flow:
+      - post:
+          url: "/api/auth/login"
+          json:
+            email: "test@example.com"
+            password: "password123"
+          capture:
+            - json: "$.access_token"
+              as: "token"
+      
+      - get:
+          url: "/api/notifications"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          capture:
+            - json: "$[0].id"
+              as: "notificationId"
+              when: "statusCode === 200 && $[0]"
+      
+      - patch:
+          url: "/api/notifications/{{ notificationId }}"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          json:
+            read: true
+          when: "notificationId !== undefined"
+      
+      - think: 1

@@ -1,15 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-<<<<<<< HEAD
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-=======
-    "lib": ["dom", "dom.iterable", "esnext"],
->>>>>>> e7ccbd0681944b29d55ebf5989cc788d3bf16edd
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -28,10 +24,7 @@
       }
     ],
     "paths": {
-<<<<<<< HEAD
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -42,11 +35,4 @@
   "exclude": [
     "node_modules"
   ]
-=======
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
->>>>>>> e7ccbd0681944b29d55ebf5989cc788d3bf16edd
 }
