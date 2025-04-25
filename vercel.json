@@ -6,8 +6,8 @@
   "framework": "nextjs",
   "regions": ["fra1"],
   "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "your-supabase-url",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "your-supabase-anon-key"
+    "NEXT_PUBLIC_SUPABASE_URL": "${NEXT_PUBLIC_SUPABASE_URL}",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "${NEXT_PUBLIC_SUPABASE_ANON_KEY}"
   },
   "build": {
     "env": {

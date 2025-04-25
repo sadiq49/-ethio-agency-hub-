@@ -97,7 +97,16 @@ export async function getUserProfile(userId: string) {
   return { data, error };
 }
 
-export async function updateUserProfile(userId: string, updates: any) {
+type ProfileUpdates = {
+  full_name?: string;
+  avatar_url?: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+  // Add other profile fields as needed
+};
+
+export async function updateUserProfile(userId: string, updates: ProfileUpdates) {
   const supabase = createServerSupabaseClient();
   
   const { data, error } = await supabase

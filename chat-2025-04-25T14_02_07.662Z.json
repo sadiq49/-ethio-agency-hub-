@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "id": "hsuvwrouou",
+      "content": "Import the \".bolt\" folder",
+      "createdAt": "2025-04-25T13:38:09.182Z"
+    },
+    {
+      "role": "assistant",
+      "content": "I've imported the contents of the \".bolt\" folder.\n\n<boltArtifact id=\"imported-files\" title=\"Imported Files\" type=\"bundled\" >\n<boltAction type=\"file\" filePath=\"config.json\">\n{\r\n  \"template\": \"nextjs-shadcn\"\r\n}\r\n\n</boltAction>\n\n<boltAction type=\"file\" filePath=\"ignore\">\ncomponents/ui/*\r\nhooks/use-toast.ts\r\n\n</boltAction>\n\n<boltAction type=\"file\" filePath=\"prompt\">\nFor all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.\r\n\r\nWhen using client-side hooks (useState and useEffect) in a component that's being treated as a Server Component by Next.js, always add the \"use client\" directive at the top of the file.\r\n\r\nDo not write code that will trigger this error: \"Warning: Extra attributes from the server: %s%s\"\"class,style\"\r\n\r\nBy default, this template supports JSX syntax with Tailwind CSS classes, the shadcn/ui library, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.\r\n\r\nUse icons from lucide-react for logos.\r\n\r\nUse stock photos from Pexels where appropriate, only valid URLs you know exist. Do not download the images, only link to them in image tags.\r\n\n</boltAction>\n</boltArtifact>",
+      "id": "qx01rm9cnrd",
+      "createdAt": "2025-04-25T13:38:09.182Z"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "[Model: gemini-2.0-flash-exp]\n\n[Provider: Google]\n\nhi"
+        }
+      ],
+      "id": "siUfV16l3a3CWMGp",
+      "createdAt": "2025-04-25T13:39:26.924Z"
+    }
+  ],
+  "description": ".bolt",
+  "exportDate": "2025-04-25T14:02:07.662Z"
+}

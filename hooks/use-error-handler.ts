@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { errorReporting } from '../lib/error-reporting';
+import { ErrorReporting } from '../lib/services/analytics'; // Fixed import
 import { useNotifications } from '@/contexts/notification-context';
 
 interface ErrorHandlerOptions {
@@ -21,7 +21,7 @@ export function useErrorHandler(options: ErrorHandlerOptions) {
     console.error(`Error in ${options.context}:`, error);
     
     // Report to error tracking service
-    errorReporting.captureError(error, { 
+    ErrorReporting.captureException(error, { // Fixed method name
       componentStack: options.context,
       actionDescription
     });

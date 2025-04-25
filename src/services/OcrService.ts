@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 import * as FileSystem from 'expo-file-system';
-import { ErrorReporting } from '../../lib/services/analytics';
+import { ErrorReporting } from '../lib/services/analytics'; // Fixed path
 import { API_CONFIG } from '../config';
 
 interface OcrResult {
@@ -125,39 +125,24 @@ class OcrService {
   }
 
   /**
-   * Convert image URI to base64
+   * Convert image URI to base64 string
    */
   private async getBase64FromUri(uri: string): Promise<string> {
     try {
-      // For local files
-      if (uri.startsWith('file://') || Platform.OS === 'android') {
-        const base64 = await FileSystem.readAsStringAsync(uri, {
-          encoding: FileSystem.EncodingType.Base64,
-        });
-        return base64;
+      const fileInfo = await FileSystem.getInfoAsync(uri);
+      
+      if (!fileInfo.exists) {
+        throw new Error('Image file not found');
       }
       
-      // For remote files
-      const response = await fetch(uri);
-      const blob = await response.blob();
+      const base64 = await FileSystem.readAsStringAsync(uri, {
+        encoding: FileSystem.EncodingType.Base64,
+      });
       
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          const base64String = reader.result as string;
-          // Remove data URL prefix
-          const base64 = base64String.split(',')[1];
-          resolve(base64);
-        };
-        reader.onerror = reject;
-        reader.readAsDataURL(blob);
-      });
+      return base64;
     } catch (error) {
-      ErrorReporting.captureException(error as Error, { 
-        context: 'OcrService.getBase64FromUri',
-        uri
-      });
-      throw new Error(`Failed to convert image to base64: ${(error as Error).message}`);
+      console.error('Error converting image to base64:', error);
+      throw new Error('Failed to process image data');
     }
   }
 }

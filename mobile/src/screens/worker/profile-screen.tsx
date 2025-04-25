@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useAuth } from '../../contexts/auth-context';
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from '../../../lib/supabase';
 
-// Initialize Supabase client
-const supabaseUrl = 'YOUR_SUPABASE_URL';
-const supabaseKey = 'YOUR_SUPABASE_KEY';
-const supabase = createClient(supabaseUrl, supabaseKey);
+// Remove hardcoded initialization
+// const supabaseUrl = 'YOUR_SUPABASE_URL';
+// const supabaseKey = 'YOUR_SUPABASE_KEY';
+// const supabase = createClient(supabaseUrl, supabaseKey);
 
 const WorkerProfileScreen = () => {
   const { user } = useAuth();

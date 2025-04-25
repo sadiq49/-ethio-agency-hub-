@@ -5,6 +5,9 @@ node_modules/
 
 # Testing
 /coverage
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 # Next.js
 /.next/
@@ -24,7 +27,82 @@ node_modules/
 
 # Debug
 npm-debug.log*
-yarn-debug.log*
+yarn-debug.*
+yarn-error.*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
 yarn-error.log*
 
 # Local Netlify folder
@@ -52,3 +130,4240 @@ mobile/web-build/
 .vscode
 *.swp
 *.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.temp
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/npm-debug.*
+mobile/*.jks
+mobile/*.p8
+mobile/*.p12
+mobile/*.key
+mobile/*.mobileprovision
+mobile/*.orig.*
+mobile/web-build/
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Large files
+*.log
+*.mp4
+*.zip
+*.tar.gz
+*.tgz
+
+# Generated files
+.vercel
+.turbo
+yarn-error.log*
+
+# Local Netlify folder
+.netlify
+
+# Supabase
+.branches
+.

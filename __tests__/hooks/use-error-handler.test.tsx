@@ -1,11 +1,11 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useErrorHandler } from '../../hooks/use-error-handler';
-import { errorReporting } from '../../lib/error-reporting';
+import { ErrorReporting } from '../../lib/services/analytics'; // Fixed import
 
 // Mock dependencies
-jest.mock('../../lib/error-reporting', () => ({
-  errorReporting: {
-    captureError: jest.fn()
+jest.mock('../../lib/services/analytics', () => ({
+  ErrorReporting: {
+    captureException: jest.fn() // Fixed method
   }
 }));
 
@@ -36,7 +36,7 @@ describe('useErrorHandler Hook', () => {
     expect(result.current.error).toEqual(testError);
     
     // Check if error was reported
-    expect(errorReporting.captureError).toHaveBeenCalledWith(
+    expect(ErrorReporting.captureException).toHaveBeenCalledWith( // Fixed method
       testError,
       { 
         componentStack: 'TestComponent',

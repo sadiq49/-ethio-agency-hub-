@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { ErrorReporting } from '../../lib/services/analytics';
+import { ErrorReporting } from '../lib/services/analytics'; // Fixed path
 import { theme } from '../theme';
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
+  onError?: (error: Error, info: React.ErrorInfo) => void;
 }
 
 interface ErrorBoundaryState {
@@ -29,6 +30,11 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     ErrorReporting.captureException(error, { 
       componentStack: info.componentStack 
     });
+    
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, info);
+    }
   }
 
   resetError = (): void => {

@@ -6,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
 import { Input } from "../ui/input";
+// Missing ScrollView import
+import { ScrollView } from "react-native";
 
 export function PilgrimageManagement() {
   return (
@@ -276,3 +278,15 @@ export function PilgrimageManagement() {
     </div>
   );
 }
+
+// In the component where ScrollView is used (around line 200-250)
+<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+  <Chip
+    selected={statusFilter === 'all'}
+    onPress={() => setStatusFilter('all')}
+    style={styles.filterChip}
+  >
+    All Status
+  </Chip>
+  // ... more chips ...
+</ScrollView>

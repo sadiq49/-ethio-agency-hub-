@@ -102,6 +102,10 @@ class OcrCache {
    * Find the oldest entry in the cache
    */
   private getOldestEntry(): string | null {
+    if (this.cache.size === 0) {
+      return null;
+    }
+    
     let oldestKey: string | null = null;
     let oldestTimestamp = Date.now();
     
@@ -119,13 +123,11 @@ class OcrCache {
    * Save cache to localStorage
    */
   private saveToStorage(): void {
-    if (typeof window === 'undefined') return;
-    
     try {
       const serialized = JSON.stringify(Array.from(this.cache.entries()));
       localStorage.setItem('ocr_cache', serialized);
     } catch (error) {
-      logger.error('Failed to save OCR cache to localStorage', error as Error);
+      console.error('Failed to save OCR cache to storage:', error);
     }
   }
   
@@ -133,25 +135,15 @@ class OcrCache {
    * Load cache from localStorage
    */
   private loadFromStorage(): void {
-    if (typeof window === 'undefined') return;
-    
     try {
       const serialized = localStorage.getItem('ocr_cache');
       if (serialized) {
-        const entries = JSON.parse(serialized) as [string, CacheEntry][];
+        const entries = JSON.parse(serialized);
         this.cache = new Map(entries);
-        
-        // Clean expired entries
-        const now = Date.now();
-        for (const [key, entry] of this.cache.entries()) {
-          if (now - entry.timestamp > this.ttl) {
-            this.cache.delete(key);
-          }
-        }
       }
     } catch (error) {
-      logger.error('Failed to load OCR cache from localStorage', error as Error);
-      this.cache.clear();
+      console.error('Failed to load OCR cache from storage:', error);
+      this.cache = new Map();
     }
   }
   
