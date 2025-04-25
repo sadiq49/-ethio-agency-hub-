@@ -1,26 +1,57 @@
 import { supabase } from '../lib/supabase';
 
+// Add this function to enable real-time messaging
+export const subscribeToConversations = (userId, callback) => {
+  const subscription = supabase
+    .channel('messaging')
+    .on(
+      'postgres_changes',
+      {
+        event: '*',
+        schema: 'public',
+        table: 'messages',
+        filter: `conversation_id=in.(select id from conversations where participants.user_id=eq.${userId})`
+      },
+      (payload) => {
+        callback(payload);
+      }
+    )
+    .subscribe();
+
+  return () => {
+    subscription.unsubscribe();
+  };
+};
+
 export const fetchConversations = async (userId) => {
-  const { data, error } = await supabase
-    .from('conversations')
-    .select(`
-      *,
-      participants:conversation_participants(
-        user_id,
-        user:profiles(id, full_name, avatar_url)
-      ),
-      last_message:messages(
-        id,
-        content,
-        created_at,
-        sender_id
-      )
-    `)
-    .eq('conversation_participants.user_id', userId)
-    .order('last_message_at', { ascending: false });
-  
-  if (error) throw error;
-  return data || [];
+  try {
+    const { data, error } = await supabase
+      .from('conversations')
+      .select(`
+        *,
+        participants (
+          user_id,
+          user:users (
+            id,
+            full_name
+          )
+        ),
+        last_message:messages (
+          id,
+          content,
+          created_at,
+          sender_id
+        )
+      `)
+      .contains('participants.user_id', [userId])
+      .order('updated_at', { ascending: false });
+    
+    if (error) throw error;
+    return data || [];
+  } catch (error) {
+    console.error('Error fetching conversations:', error);
+    return [];
+  }
 };
 
 export const fetchMessages = async (conversationId, limit = 20, offset = 0) => {

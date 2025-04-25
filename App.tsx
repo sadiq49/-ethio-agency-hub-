@@ -7,53 +7,56 @@ import AppNavigator from './src/navigation/AppNavigator';
 import { theme } from './src/theme';
 import { initializeOfflineManager } from './src/services/OfflineManager';
 import { registerForPushNotifications } from './src/services/NotificationService';
-import * as SplashScreen from 'expo-splash-screen';
-
-// Keep splash screen visible while we initialize the app
-SplashScreen.preventAutoHideAsync();
+import SplashScreen from 'react-native-splash-screen';
+import { OfflineIndicator } from './src/components/OfflineIndicator';
+import { setupOfflineSync } from './src/services/OfflineManager';
+import { Analytics, ErrorReporting } from './lib/services/analytics';
+import { useAuth } from './contexts/auth-context';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 export default function App() {
-  const [appIsReady, setAppIsReady] = useState(false);
+  const { user } = useAuth();
 
   useEffect(() => {
-    async function prepare() {
-      try {
-        // Initialize services
-        await initializeOfflineManager();
-        await registerForPushNotifications();
-        
-        // Artificial delay for a smoother startup experience
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      } catch (e) {
-        console.warn(e);
-      } finally {
-        // Tell the application to render
-        setAppIsReady(true);
-      }
+    // Hide splash screen after app is ready
+    SplashScreen.hide();
+    
+    // Initialize analytics with user info if available
+    if (user) {
+      Analytics.setUserId(user.id);
+      ErrorReporting.setUser({
+        id: user.id,
+        email: user.email || undefined,
+        username: user.user_metadata?.name || undefined,
+      });
     }
+    
+    // Track app open event
+    Analytics.trackEvent('app_open');
+    
+    // Initialize offline sync
+    setupOfflineSync();
+    
+    // Register for push notifications
+    registerForPushNotifications();
+  }, [user]);
 
-    prepare();
-  }, []);
-
-  useEffect(() => {
-    if (appIsReady) {
-      // Hide splash screen once the app is ready
-      SplashScreen.hideAsync();
-    }
-  }, [appIsReady]);
-
-  if (!appIsReady) {
-    return null;
-  }
+  // Set up error boundary handler
+  const handleError = (error: Error, info: { componentStack: string }) => {
+    ErrorReporting.captureException(error, { componentStack: info.componentStack });
+  };
 
   return (
-    <SafeAreaProvider>
-      <PaperProvider theme={theme}>
-        <AuthProvider>
-          <AppNavigator />
-          <StatusBar style="auto" />
-        </AuthProvider>
-      </PaperProvider>
-    </SafeAreaProvider>
+    <ErrorBoundary onError={handleError}>
+      <SafeAreaProvider>
+        <PaperProvider theme={theme}>
+          <AuthProvider>
+            <AppNavigator />
+            <StatusBar style="auto" />
+          </AuthProvider>
+        </PaperProvider>
+      </SafeAreaProvider>
+      <OfflineIndicator />
+    </ErrorBoundary>
   );
 }

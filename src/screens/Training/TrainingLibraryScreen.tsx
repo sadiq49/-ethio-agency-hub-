@@ -71,16 +71,26 @@ export default function TrainingLibraryScreen({ navigation }) {
     }
   };
 
+  // Add this function to enhance search capabilities
+  const enhancedSearch = (query, materials) => {
+    if (!query) return materials;
+    
+    const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
+    
+    return materials.filter(material => {
+      const searchableText = `${material.title} ${material.description} ${material.material_categories.map(c => c.name).join(' ')}`.toLowerCase();
+      
+      return searchTerms.every(term => searchableText.includes(term));
+    });
+  };
+  
+  // Then replace the existing search filter in applyFilters function
   const applyFilters = () => {
     let filtered = [...materials];
     
-    // Apply search filter
+    // Apply enhanced search filter
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(material => 
-        material.title.toLowerCase().includes(query) || 
-        material.description.toLowerCase().includes(query)
-      );
+      filtered = enhancedSearch(searchQuery, filtered);
     }
     
     // Apply category filter

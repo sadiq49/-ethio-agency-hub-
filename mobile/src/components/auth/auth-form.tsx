@@ -3,9 +3,9 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import { createClient } from '@supabase/supabase-js';
 import { useForm, Controller } from 'react-hook-form';
 
-// Initialize Supabase client
-const supabaseUrl = 'YOUR_SUPABASE_URL';
-const supabaseKey = 'YOUR_SUPABASE_KEY';
+// Initialize Supabase client using environment variables
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || '';
+const supabaseKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 type FormData = {
@@ -35,14 +35,14 @@ export const AuthForm: React.FC<AuthFormProps> = ({ mode, onSuccess }) => {
     
     try {
       if (mode === 'login') {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { error, data: authData } = await supabase.auth.signInWithPassword({
           email: data.email,
           password: data.password,
         });
         
         if (error) throw error;
       } else {
-        const { error } = await supabase.auth.signUp({
+        const { error, data: authData } = await supabase.auth.signUp({
           email: data.email,
           password: data.password,
         });
@@ -52,7 +52,8 @@ export const AuthForm: React.FC<AuthFormProps> = ({ mode, onSuccess }) => {
       
       onSuccess?.();
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message || 'An unexpected error occurred. Please try again.');
+      console.error('Authentication error:', err);
     } finally {
       setLoading(false);
     }

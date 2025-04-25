@@ -18,59 +18,77 @@ export default function CalendarScreen({ navigation }) {
     fetchEvents();
   }, []);
 
-  const fetchEvents = async () => {
-    setIsLoading(true);
+  // Add this function to fetch document-related events
+  const fetchDocumentEvents = async () => {
     try {
-      // Fetch user's events
-      const { data: userEvents, error: userError } = await supabase
-        .from('calendar_events')
+      const { data, error } = await supabase
+        .from('documents')
         .select('*')
-        .eq('user_id', user.id);
+        .eq('user_id', user.id)
+        .in('status', ['pending', 'approved'])
+        .gte('deadline', new Date(new Date().setDate(new Date().getDate() - 30)).toISOString())
+        .lte('deadline', new Date(new Date().setDate(new Date().getDate() + 90)).toISOString());
       
-      if (userError) throw userError;
+      if (error) throw error;
       
-      // Fetch team events
-      const { data: teamData, error: teamError } = await supabase
-        .from('user_teams')
-        .select('team_id')
-        .eq('user_id', user.id);
-      
-      if (teamError) throw teamError;
-      
-      const teamIds = teamData.map(item => item.team_id);
-      
-      let teamEvents = [];
-      if (teamIds.length > 0) {
-        const { data: events, error: eventsError } = await supabase
-          .from('calendar_events')
-          .select('*')
-          .in('team_id', teamIds)
-          .is('user_id', null);
+      // Convert document deadlines to calendar events
+      const documentEvents = {};
+      (data || []).forEach(doc => {
+        if (!doc.deadline) return;
         
-        if (eventsError) throw eventsError;
-        teamEvents = events || [];
-      }
-      
-      // Combine user and team events
-      const allEvents = [...(userEvents || []), ...teamEvents];
-      
-      // Format events for calendar
-      const formattedEvents = {};
-      allEvents.forEach(event => {
-        const dateStr = event.start_date.split('T')[0];
+        const dateStr = doc.deadline.split('T')[0];
+        const eventColor = doc.status === 'pending' ? theme.colors.warning : theme.colors.success;
         
-        if (!formattedEvents[dateStr]) {
-          formattedEvents[dateStr] = {
+        if (!documentEvents[dateStr]) {
+          documentEvents[dateStr] = {
             marked: true,
-            dotColor: event.color || theme.colors.primary,
+            dotColor: eventColor,
             events: []
           };
         }
         
-        formattedEvents[dateStr].events.push(event);
+        documentEvents[dateStr].events.push({
+          id: `doc-${doc.id}`,
+          title: `Document: ${doc.title || 'Untitled'}`,
+          start_date: doc.deadline,
+          color: eventColor,
+          type: 'document',
+          document_id: doc.id
+        });
       });
       
-      setEvents(formattedEvents);
+      return documentEvents;
+    } catch (error) {
+      console.error('Error fetching document events:', error);
+      return {};
+    }
+  };
+  
+  // Modify your fetchEvents function to include document events
+  const fetchEvents = async () => {
+    setIsLoading(true);
+    try {
+      // Fetch regular events (existing code)
+      // ... existing code ...
+      // Fetch document events
+      const documentEvents = await fetchDocumentEvents();
+      
+      // Combine all events
+      const allFormattedEvents = { ...formattedEvents };
+      
+      // Merge document events with regular events
+      Object.keys(documentEvents).forEach(date => {
+        if (!allFormattedEvents[date]) {
+          allFormattedEvents[date] = documentEvents[date];
+        } else {
+          allFormattedEvents[date].events = [
+            ...allFormattedEvents[date].events,
+            ...documentEvents[date].events
+          ];
+        }
+      });
+      
+      setEvents(allFormattedEvents);
     } catch (error) {
       console.error('Error fetching events:', error);
     } finally {
